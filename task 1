@@ -1,0 +1,15 @@
+def generate_fibonacci(n):
+    fibonacci_sequence = [0, 1]
+
+    for i in range(2, n):
+        next_number = fibonacci_sequence[i - 1] + fibonacci_sequence[i - 2]
+        fibonacci_sequence.append(next_number)
+
+    return fibonacci_sequence
+
+ Input: Number of Fibonacci numbers to generate
+n = int(input("Enter the number of Fibonacci numbers to generate: "))
+
+ Generate and print the Fibonacci sequence
+fibonacci_result = generate_fibonacci(n)
+print(f"The first {n} numbers in the Fibonacci sequence are: {fibonacci_result}")
